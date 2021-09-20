@@ -5,7 +5,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('ML_Code/Classified_User.csv')
+df = pd.read_csv('Machine_Learning/Classified_User.csv')
 
 #Categorize UBI discount rate on some conditions
 #Insurance default price per year is NT$1300
