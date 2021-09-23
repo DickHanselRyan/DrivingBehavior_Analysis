@@ -1,0 +1,29 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+<body>
+	<div class="container">
+		<h1>About Us</h1>
+		<link rel="stylesheet" type="text/css"
+			href="{% static 'css/main.css' %}">
+		<div class="img-col">
+			<img src="static/images/hansel.jpg" alt="Hansel", width="120", height="125">
+		</div>
+		<div class="text-col">
+			<h5 class="title">Hansel</h5>
+			<p class="card-text">Group leader</p>
+		</div>
+		<img src="static/images/jane.jpg" alt="Jane", width="120", height="125">
+			<h5 class="title">Jane</h5>
+			<p class="card-text">Group member</p>
+		<img src="static/images/joyce.jpg" alt="Joyce", width="120", height="125">
+			<h5 class="title">Joyce</h5>
+			<p class="card-text">Group member</p>
+		<img src="static/images/allen.jpg" alt="Allen", width="120", height="125">
+			<h5 class="title">Allen</h5>
+			<p class="card-text">Group member</p>
+		
+	</div>
+</body>
+	
+{% endblock %}

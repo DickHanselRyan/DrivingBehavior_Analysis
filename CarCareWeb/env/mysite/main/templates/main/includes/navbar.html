@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+<head>
+<title>Car Care</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+<div class="menu-bar">
+  <style>
+    body{
+      background-image: url('static/images/car4.jpg');
+      background-position: 100% 10%;
+      background-size: 40% auto;
+      background-repeat: no-repeat;
+    }
+  </style>
+<ul>
+  <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+  {% if user.is_authenticated%}
+  <li>
+    <a href=" data "><i class="fas fa-database"></i>Data</a>
+    <div class="sub-menu-1">
+      <ul>
+        <li><a href="upload"><i class="fas fa-upload"></i>Data Upload</a></li>
+        <li><a href="data_analysis"><i class="fas fa-chart-bar"></i>Data Analysis</a></li>
+        <li><a href="data_prediction"><i class="fas fa-chart-bar"></i>Data Prediction</a></li>
+      </ul>
+    </div>
+  </li>
+  {% endif %}
+  <li><a href="aboutus"><i class="fas fa-address-card"></i>About us</a>
+  <div class="sub-menu-1">
+    <ul>
+      <li><a href="#"><i class="fas fa-plus-square"></i>Final Project</a></li>
+      <li><a href="aboutus"><i class="fas fa-users"></i>Team Member</a></li>
+    </ul>
+  </div>
+  </li>
+
+  {% if user.is_authenticated %}
+    <li>
+      <a href="/user"><i class="fas fa-user"></i>{{user.username|title}}</a>
+    </li>
+    <li>
+      <a href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+    </li>
+    
+  {% else %}
+    <li><a href="/login"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+    <li><a href="/register"><i class="fas fa-registered"></i>Register</a></li>
+  {% endif %}
+</ul>
+</div>
+</body>
+</html>

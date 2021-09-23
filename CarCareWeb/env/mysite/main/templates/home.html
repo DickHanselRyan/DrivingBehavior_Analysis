@@ -1,0 +1,31 @@
+{% extends 'main/header.html' %}
+
+  {% block content %}
+
+  {% load static %}
+  <!--CTA-->
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6 pb-4">
+      {% if user.is_authenticated%}
+        <h2 class="display-4 font-weight-bold">Car Care introdction</h2>
+        <br/> Car Care was developed to enable users to view their past driving records and 
+        using the machine learning model and big data analysis to predict their driving behavior.
+        <br/>
+        {% else %}
+        <h2 class="display-4 font-weight-bold">Car Care introdction</h2>
+        <br/> Car Care was developed to enable users to view their past driving records and 
+        using the machine learning model and big data analysis to predict their driving behavior.</br>
+        <a class="btn btn-primary mt-2" href="/register">Become our member</a>
+        <br><br>
+        {% endif %}
+        <h3 class="display-4 font-weight-bold">Contact us</h3>
+        <br/> If you want to contact us, please click the button and leave messages. <br/>
+        <a class="btn btn-primary mt-2" href="/contact_us">Contact us</a>
+        <br><br>
+        <h5 >
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

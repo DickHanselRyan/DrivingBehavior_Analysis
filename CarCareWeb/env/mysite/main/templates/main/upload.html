@@ -1,0 +1,18 @@
+{% extends "main/header.html" %}
+
+    {% block content %}
+    	<div class="container py-5">
+		<h1 class="font-weight-bold">Upload data</h1>
+		<form  method= "POST" enctype="multipart/form-data">
+        	{% csrf_token %}
+			{{ form.as_p }}
+
+			<button class="btn btn-primary" type="submit">Upload</button>
+			{{context}}
+        </form>
+		<hr>
+		
+		<br><br>
+	</div>
+
+{% endblock%}

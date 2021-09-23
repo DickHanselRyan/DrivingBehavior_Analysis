@@ -1,0 +1,83 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menu-bar
+{
+    background: #385BB1;
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar li
+{
+    width: 150px;
+    margin:15px;
+    padding:15px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 140%;
+    font-style: inherit;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #2C4B98;
+    border-radius: 3px;
+}
+.menu-bar .fas
+{
+    margin-right: 8px;
+}
+.sub-menu-1
+{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: #385BB1;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 200px;
+    padding: 10px;
+    border-bottom: 1px dotted;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: #618CF7;
+}
+
+.menu-bar style
+{
+    opacity: 0.5;
+}

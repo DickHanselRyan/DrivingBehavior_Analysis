@@ -1,0 +1,47 @@
+{% extends "main/header.html" %}
+
+	{% block content %}
+
+	<!--User page HTML-->
+<br><br>
+	<div class="container mx-auto">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		    <div class="col-sm-12 col-md-12 col-lg-9 pb-4">
+		    	<div class="col-6 my-auto">
+		    	<h2 class="font-weight-bold pt-4">Data</h2>
+				<table border="1">
+				<form method="POST">
+					{% csrf_token %}
+				From:<input type = "date" name="startdate"/> to:<input type = "date" name="enddate"/>
+				<button class="btn btn-primary" type="submit">Sumbit</button>
+				<table class="table">
+  					<thead>
+    				<tr>
+						<th scope="col">time</th>
+						<th scope="col">Average_speed</th>
+      					<th scope="col">Distance_travelled</th>
+      					<th scope="col">Engine_RPM(rpm)</th>
+						<th scope="col">Fuel_used</th>
+      					<th scope="col">Vehicle_speed</th>
+						<th scope="col">Driver_Type</th>
+						<th scope="col">Insurance_Fee</th>
+    				</tr>
+					{%for result in data%}
+					<tr>
+						<td>{{result.time}}</td>
+						<td>{{result.Average_speed}}</td>
+						<td>{{result.Distance_travelled}}</td>
+						<td>{{result.Engine_RPM}}</td>
+						<td>{{result.Fuel_used}}</td>
+						<td>{{result.Vehicle_speed}}</td>
+						<td>{{result.Driver_Type}}</td>
+						<td>{{result.Insurance_Fee}}</td>
+					{% endfor %}						
+  					</thead>
+				</table>
+				</form>
+			</div>
+		
+	</div>
+
+{% endblock %}
